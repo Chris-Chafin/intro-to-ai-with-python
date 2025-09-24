@@ -9,7 +9,7 @@ Lecture 0
     Terms:
         Agent: Entity that perceives its environment and acts upon that environment
         State: a configuration of the agent in its environment
-        Initial State: the state where the agent begins
+            Initial State: the state where the agent begins
         Actions: choices that can be made in a state
             - as a function:
                 Actions(s)
@@ -22,7 +22,7 @@ Lecture 0
         Goal Test: way to determine wheter a given state is a goal state
         Path Cost: numerical cost associated with a given path
         Solution: a sequence of actions that leads from the initial state to the goal state
-        Optimal Solution: a solution that has the lowest path cost among all solutions
+            Optimal Solution: a solution that has the lowest path cost among all solutions
         node: a data structure that keeps track of 
             - a state
             - a parent (node that generated this node)
