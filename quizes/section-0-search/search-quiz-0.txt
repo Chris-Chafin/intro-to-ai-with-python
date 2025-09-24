@@ -1,11 +1,13 @@
 Question 1
     Between depth first search (DFS) and breadth first search (BFS), which will find a shorter path through a maze?
 
-        DFS will always find a shorter path than BFS
-        BFS will always find a shorter path than DFS
-        DFS will sometimes, but not always, find a shorter path than BFS
-        BFS will sometimes, but not always, find a shorter path than DFS
-        Both algorithms will always find paths of the same length
+        A) DFS will always find a shorter path than BFS
+        B) BFS will always find a shorter path than DFS
+        C) DFS will sometimes, but not always, find a shorter path than BFS
+        D) BFS will sometimes, but not always, find a shorter path than DFS
+        E) Both algorithms will always find paths of the same length
+
+        Answer: D
 
 Question 2
     Consider the below maze. Grey cells indicate walls. A search algorithm was run on this maze, and found the yellow highlighted path from point A to B. In doing so, the red highlighted cells were the states explored but that did not lead to the goal.
@@ -14,23 +16,27 @@ Question 2
 
     Of the four search algorithms discussed in lecture — depth-first search, breadth-first search, greedy best-first search with Manhattan distance heuristic, and A* search with Manhattan distance heuristic — which one (or multiple, if multiple are possible) could be the algorithm used?
 
-        Could only be A*
-        Could only be greedy best-first search
-        Could only be DFS
-        Could only be BFS
-        Could be either A* or greedy best-first search
-        Could be either DFS or BFS
-        Could be any of the four algorithms
-        Could not be any of the four algorithms
+       A) Could only be A*
+       B) Could only be greedy best-first search
+       C) Could only be DFS
+       D) Could only be BFS
+       E) Could be either A* or greedy best-first search
+       F) Could be either DFS or BFS
+       G) Could be any of the four algorithms
+       H) Could not be any of the four algorithms
+
+       Answer: C
 
 Question 3
 
     Why is depth-limited minimax sometimes preferable to minimax without a depth limit?
 
-        Depth-limited minimax can arrive at a decision more quickly because it explores fewer states
-        Depth-limited minimax will achieve the same output as minimax without a depth limit, but can sometimes use less memory
-        Depth-limited minimax can make a more optimal decision by not exploring states known to be suboptimal
-        Depth-limited minimax is never preferable to minimax without a depth limit
+       A) Depth-limited minimax can arrive at a decision more quickly because it explores fewer states
+       B) Depth-limited minimax will achieve the same output as minimax without a depth limit, but can sometimes use less memory
+       C) Depth-limited minimax can make a more optimal decision by not exploring states known to be suboptimal
+       D) Depth-limited minimax is never preferable to minimax without a depth limit
+
+       Answer: A
 
 
 Question 4
@@ -40,3 +46,5 @@ Question 4
     https://cs50.harvard.edu/ai/quizzes/images/q0q4.png
 
     What is the value of the root node?
+
+    Answer: 5
