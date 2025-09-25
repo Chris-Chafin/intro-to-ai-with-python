@@ -1,3 +1,43 @@
-Lecture 0
+Lecture 1 - Knowledge
 
-- Knowledge
+Knowledge
+
+    - Knowledge-Based Agents
+        Agents that reasons by operating on internal representations of knowledge
+        - Example: 
+            1) If it didn’t rain, Harry visited Hagrid today.
+            2) Harry visited Hagrid or Dumbledore today, but not both.
+            3) Harry visited Dumbledore today.
+            - Therefore
+                4) Harry did not visit Hagrid
+                5) It rained today
+
+    - Sentence
+        An assertion about the world in a knowledge representation language.
+            - Is how AI stores knowledge and uses it to infer new information.
+
+Propositional Logic
+    Based on propositions, states about the word that can be either true or false.
+
+    - Propositional Symbols
+        Are most often letters (P, Q, R) that are used to represent a proposition.
+        
+    - Logical Connectives
+        Logical symbols that connect propositional symbols in order to reason in a more complex way about the world.
+        -Not (¬) inverses the truth value of the proposition.
+            Example, if P: “It is raining,” then ¬P: “It is not raining”.
+        -And (∧) connects two different propositions.
+            When these two proposition, P and Q, are connected by ∧, the resulting proposition P ∧ Q is true only in the case that both P and Q are true.
+        -Or (∨) is true as as long as either of its arguments is true. 
+            This means that for P ∨ Q to be true, at least one of P or Q has to be true.
+
+            It is worthwhile to mention that there are two types of Or: an inclusive Or and an exclusive Or. 
+                In an exclusive Or, P ∨ Q is false if P ∧ Q is true. That is, an exclusive Or requires only one of its arguments to be true and not both. 
+                An inclusive Or is true if any of P, Q, or P ∧ Q is true. In the case of Or (∨), the intention is an inclusive Or.
+
+            Sometimes an example helps understand inclusive versus exclusive Or. 
+                Inclusive Or: “in order to eat dessert, you have to clean your room or mow the lawn.” In this case, if you do both chores, you will still get the cookies. 
+                Exclusive Or: “For dessert, you can have either cookies or ice cream.” In this case, you can’t have both.
+            
+            If you are curious, the exclusive Or is often shortened to XOR and a common symbol for it is ⊕).
+
