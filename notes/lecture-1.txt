@@ -39,5 +39,56 @@ Propositional Logic
                 Inclusive Or: “in order to eat dessert, you have to clean your room or mow the lawn.” In this case, if you do both chores, you will still get the cookies. 
                 Exclusive Or: “For dessert, you can have either cookies or ice cream.” In this case, you can’t have both.
             
-            If you are curious, the exclusive Or is often shortened to XOR and a common symbol for it is ⊕).
+            The exclusive Or is often shortened to XOR and a common symbol for it is ⊕)
+        -Implication (→) represents a structure of “if P then Q.” 
+            For example, if P: “It is raining” and Q: “I’m indoors”, then P → Q means “If it is raining, then I’m indoors.” 
+            In the case of P implies Q (P → Q), P is called the antecedent and Q is called the consequent.
+                (When the antecedent is true, the whole implication is true in the case that the consequent is true)
+                (When the antecedent is true, the implication is false if the consequent is false)
+        -Biconditional (↔) is an implication that goes both directions. 
+            Read as “if and only if.” 
+            P ↔ Q is the same as P → Q and Q → P taken together.
+    - Model
+        An assignment of a truth value to every proposition.
+            Knowledge about the world is represented in the truth values of these propositions.
+            The model is the truth-value assignment that provides information about the world.
+    - Knowledge Base (KB)
+        A set of sentences known by a knowledge-based agent.
+            Knowledge that the AI is provided about the world in the form of propositional logic sentences that can be used to make additional inferences about the world.
+    - Entailment (⊨)
+        if a ⊨ b (a entails b), then in any world where a is true, b is true too.
 
+Inference
+    The process of deriving new sentences from old ones.
+    There are multiple ways to infer new knowledge based on existing knowledge.
+    
+    Consider the Model Checking algorithm to determine if KB ⊨ α 
+        (in other words, answering the question: “can we conclude that α is true based on our knowledge base”)
+    Enumerate all possible models.
+    If in every model where KB is true, α is true as well, then KB entails α (KB ⊨ α).
+
+    Example:
+        P: It is a Tuesday. 
+        Q: It is raining. 
+        R: Harry will go for a run. 
+        KB: (P ∧ ¬Q) → R (in words, P and not Q imply R) P (P is true) ¬Q (Q is false) 
+        Query: R (We want to know whether R is true or false; Does KB ⊨ R?)
+
+        To answer the query using the Model Checking algorithm, we enumerate all possible models.
+            - First, in our KB, we know that P is true. Thus, we can say that the KB is false in all models where P is not true.
+            - Next, similarly, in our KB, we know that Q is false. Thus, we can say that the KB is false in all models where Q is true.
+            - Finally, we are left with two models. 
+                -In both, P is true and Q is false. 
+                -In one model R is true and in the other R is false. 
+                -Due to (P ∧ ¬Q) → R being in our KB, we know that in the case where P is true and Q is false, R must be true. 
+                -Thus, we say that our KB is false for the model where R is false, and true for the model where R is true.
+
+        P       |   Q       |   R       |   KB
+        false   |   false	|   false   |   false	 
+        false   |   false	|   true    |	false 
+        false   |   true	|   false   |	false 
+        false   |   true	|   true    |	false 
+        true    |   false	|   false   |	false 
+        true    |   false	|   true    |	true  <---- winner
+        true    |   true	|   false   |	false 
+        true    |   true	|   true    |	fasle 
