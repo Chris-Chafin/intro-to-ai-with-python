@@ -83,12 +83,15 @@ Inference
                 -Due to (P ∧ ¬Q) → R being in our KB, we know that in the case where P is true and Q is false, R must be true. 
                 -Thus, we say that our KB is false for the model where R is false, and true for the model where R is true.
 
-        P       |   Q       |   R       |   KB
-        false   |   false	|   false   |   false	 
-        false   |   false	|   true    |	false 
-        false   |   true	|   false   |	false 
-        false   |   true	|   true    |	false 
-        true    |   false	|   false   |	false 
-        true    |   false	|   true    |	true  <---- winner
-        true    |   true	|   false   |	false 
-        true    |   true	|   true    |	fasle 
+            P       |   Q       |   R       |   KB
+            false   |   false	|   false   |   false	 
+            false   |   false	|   true    |	false 
+            false   |   true	|   false   |	false 
+            false   |   true	|   true    |	false 
+            true    |   false	|   false   |	false 
+            true    |   false	|   true    |	true  <---- winner
+            true    |   true	|   false   |	false 
+            true    |   true	|   true    |	fasle 
+
+            - Note that we are interested only in the models where the KB is true. 
+                - If the KB is false, then the conditions that we know to be true are not occurring in these models, making them irrelevant to our case.
